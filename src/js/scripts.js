@@ -3,24 +3,49 @@
   'use strict';
 
 
+  function hideWdwAndShowOne(sWindowId){
+    $('.wdw').hide();
+    $('#' + sWindowId).show();
+  }
 
 
-function hideWdwAndShowOne(sWindowId){
-  $('.wdw').hide();
-  $('#' + sWindowId).show();
-}
-
-
-$(document).ready(function() {
-  hideWdwAndShowOne('wdw-market');
-})
-
-  $(function () {
-    // FastShell
+  $(document).ready(function() {
+    hideWdwAndShowOne('wdw-market , wdw-news');
   });
 
 
-console.log('f');
+
+  /**********************************************************************/
+  // Events 
+  /**********************************************************************/
+
+  //Predictions
+  $('#btn-predictions').on('click', function() {
+      hideWdwAndShowOne('wdw-predictions');
+      console.log('wdw predictions click');
+  });
+
+    // Pools
+    $('#btn-pools').on('click', function() {
+      hideWdwAndShowOne('wdw-pools');
+      console.log('wdw pool click');
+  });
+
+  //Live 
+   $('#btn-live').on('click', function() {
+      hideWdwAndShowOne('wdw-live');
+      console.log('wdw live click');
+  });
+
+
+
+
+  $(function () {
+    // FastShell
+
+  });
+
+
 
 
 
