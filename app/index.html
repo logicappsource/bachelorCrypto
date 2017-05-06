@@ -6,10 +6,10 @@
 
     <!-- Enable responsiveness on mobile devices-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<link rel="stylesheet/scss" href="../src/scss/style.scss">
+   
 
     <title>
-       Crypto | Imperium  Nwf
+       Crypto | Nit
     </title>
 
     <!--START Loader 
@@ -17,13 +17,14 @@
         #initial-loader{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;background:#212121;position:fixed;z-index:10000;top:0;left:0;bottom:0;right:0;transition:opacity .2s ease-out}#initial-loader .initial-loader-top{display:flex;align-items:center;justify-content:space-between;width:200px;border-bottom:1px solid #2d2d2d;padding-bottom:5px}#initial-loader .initial-loader-top > *{display:block;flex-shrink:0;flex-grow:0}#initial-loader .initial-loader-bottom{padding-top:10px;color:#5C5C5C;font-family:-apple-system,"Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;font-size:12px}@keyframes spin{100%{transform:rotate(360deg)}}#initial-loader .loader g{transform-origin:50% 50%;animation:spin .5s linear infinite}body.loading {overflow: hidden !important} body.loaded #initial-loader{opacity:0}
     </style>-->
     <!--END Loader-->
-
+     <link rel="stylesheet/scss" href="assets/scss/style.scss">
     <!-- SCSS Output -->
     <!-- build:css assets/stylesheets/app.min.css -->
     <link rel="stylesheet" href="assets/stylesheets/bootstrap.css">
     <link rel="stylesheet" href="assets/stylesheets/app.css">
     <link rel="stylesheet" href="assets/stylesheets/plugins.css">
     <!-- endbuild -->
+       <link rel="stylesheet" href="/../../src/scss/style.scss">
 
     <!-- START Favicon -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
@@ -42,7 +43,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!-- END Favicon -->
+   
 
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="atom.xml">
@@ -58,10 +59,11 @@
       ga('send', 'pageview');
     </script>
 
-    <!-- jekyll settings -->
+    <!-- jekyll settings
     <script>
         var ASSET_PATH_BASE = '';
     </script>
+     -->
 </head>
 <!-- END Head -->
 
@@ -110,7 +112,6 @@
                     </a>
                 </li>
                 <!-- END Switch Sidebar ON/OFF -->
-
                 <li class="spin-search-box clearfix hidden-xs">
                     <a href="#" class="pull-left">
                         <i class="fa fa-search fa-lg icon-inactive"></i>
@@ -158,11 +159,11 @@
         <ul class="side-menu m-t-2">
             <li class="Dashboards">
                 <a href="#" title="Dashboards">
-                    <i class="fa  fa-folder-open-o fa-lg fa-fw"></i><span class="nav-label">Folder</span><i class="fa arrow"></i>
+                    <i class="fa  fa-folder-open-o fa-lg fa-fw"></i><span class="nav-label">Main</span><i class="fa arrow"></i>
                 </a>
                 <ul>
                     <li class='active'>
-                        <a href="#"><span class="nav-label">Starter HTML/CSS</span>
+                        <a href="#"><span class="nav-label">Market</span>
                         </a>
                     </li>
                 </ul>
@@ -208,7 +209,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="page-header m-t-0">
-                    <h3 class="m-t-0">Starter HTML/CSS</h3>
+                    <h3 class="m-t-0">Starter TML/CSS</h3>
                 </div>
             </div>
         </div>
@@ -222,20 +223,14 @@
         <div class="row">
             <div class="col-lg-12 sub-navbar-column">
                 <div class="sub-navbar-header">
-                    <h3>Starter HTML/CSS</h3>
+                    <h3>CryptoNit Analyze and Predicts markets</h3>
                 </div>
                 <ol class="breadcrumb navbar-text navbar-right no-bg">
-                    <li class="current-parent">
-                        <a class="current-parent" href="index.html">
-                            <i class="fa fa-fw fa-home"></i>
-                        </a>
-                    </li>
+                    
                     <li>
-                        <a href="#">
-                            Folder
-                        </a>
+                        
                     </li>
-                    <li class="active">Starter HTML/CSS</li>
+                    <li class="active">Coin of today</li>
                 </ol>
             </div>
         </div>
@@ -250,9 +245,331 @@
     <div class="row">
         <div class="col-lg-12">
 
-            <p>This is a clean Starter version of <strong>Spin Dashboard</strong>.
-            This base project can be quickly attached to any web application based on <strong>HTML/CSS/JS</strong>, or to start a new project.
-            Suits well for technologies such as PHP / Ruby on Rails / Django / ASP.NET / Meteor etc.</p>
+           <!--Wdw - market-->
+           <div class="wdw" id="wdw-market">
+
+                                <!-- START Your Favourite Stocks -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">Top Market</h2>
+                                    <div class="m-b-2 text-white"> Favourite Crypto Stocks </div>
+
+                                    <span class="text-nowrap"><small>Action Score</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <small>Quality Score</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <small>Value Score</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <small>Growth Score</small></div>
+                                         <div class="text-nowrap m-t-1">
+                                        <small>Future Trend</small></div>
+                                </div>
+                                <!-- END Your Favourite Stocks -->
+
+                                <!-- START top market  -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">Bitcoin</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-up text-success"></i>
+                                        <span class="text-success">256.00</span> |
+                                        <small><span>89.2%</span></small> </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">23</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">67</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">12</small></div>
+                                          <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">12</small></div>
+                                </div>
+                              
+
+                                <!-- START Eth -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">Ethereum</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-up text-success"></i>
+                                        <span class="text-success">480.00</span> |
+                                        <small><span>60.7%</span></small>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">89</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">11</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">43</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">10</small></div>
+                                          <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">12</small></div>
+                                </div>
+                             
+
+                                <!-- START Ripple -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">Ripple</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-up text-success"></i>
+                                        <span class="text-success">778.00</span> |
+                                        <small><span>93.0%</span></small>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">11</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">98</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">67</small></div>  
+                                        <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">12</small></div>
+                                </div>
+                               
+
+                                <!-- START Dash -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">DASH</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-down text-danger"></i>
+                                        <span class="text-danger">1000.00</span> |
+                                        <small><span>49.0%</span></small>
+                                          <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">12</small></div>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">11</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">98</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">67</small></div>
+                                        
+                                </div>
+                            
+
+                                <!-- START Monero -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">Monero</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-down text-danger"></i>
+                                        <span class="text-danger">954.00</span> |
+                                        <small><span>58.5%</span></small>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">11</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">98</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">67</small></div>
+                                          <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">12</small></div>
+                                </div>
+                                <!-- END Monero -->
+
+
+
+                                  <!-- Medium Stocks-->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">Mid Stocks</h2>
+                                    <div class="m-b-2 text-white"> Middle Market </div>
+
+                                    <span class="text-nowrap"><small>Action Score</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <small>Quality Score</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <small>Value Score</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <small>Growth Score</small></div>
+                                </div>
+                                <!-- END Your Favourite Stocks -->
+
+                                <!-- START AAPL -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">AAPL</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-up text-success"></i>
+                                        <span class="text-success">256.00</span> |
+                                        <small><span>89.2%</span></small> </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">23</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">67</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">12</small></div>
+                                </div>
+                                <!-- END AAPL -->
+
+                                <!-- START MSFT -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">MSFT</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-up text-success"></i>
+                                        <span class="text-success">480.00</span> |
+                                        <small><span>60.7%</span></small>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">89</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">11</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">43</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">10</small></div>
+                                </div>
+                                <!-- END MSFT -->
+
+                                <!-- START CAT -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">CAT</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-up text-success"></i>
+                                        <span class="text-success">778.00</span> |
+                                        <small><span>93.0%</span></small>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">11</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">98</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">67</small></div>
+                                </div>
+                                <!-- END CAT -->
+
+                                <!-- START TSLA -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">TSLA</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-down text-danger"></i>
+                                        <span class="text-danger">1000.00</span> |
+                                        <small><span>49.0%</span></small>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">11</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">98</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">67</small></div>
+                                </div>
+                                <!-- END TSLA -->
+
+                                <!-- START KN -->
+                                <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 m-b-1">
+                                    <h2 class="m-t-0 m-b-0 f-w-300">KN</h2>
+                                    <div class="m-b-2"><i class="fa fa-fw fa-caret-down text-danger"></i>
+                                        <span class="text-danger">954.00</span> |
+                                        <small><span>58.5%</span></small>
+                                    </div>
+
+                                    <span class="text-nowrap">
+          <span class="label label-gray-lighter m-r-1 label-outline">A</span>
+                                    <small class="text-white">11</small></span>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-light m-r-1 label-outline">Q</span>
+                                        <small class="text-white">23</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray m-r-1 label-outline">V</span>
+                                        <small class="text-white">98</small></div>
+
+                                    <div class="text-nowrap m-t-1">
+                                        <span class="label label-gray-lighter m-r-1 label-outline">G</span>
+                                        <small class="text-white">67</small></div>
+                                </div>
+                                <!-- END KN -->
+
+                            </div>
+
+
+
+
+                            </div>
+           </div>
+           
 
         </div>
     </div>
@@ -266,7 +583,7 @@
 <footer>
     <div class="container-fluid">
         <p class="text-gray-dark">
-            © 2016 - Your Company Name
+            © 2017 - CryptoImperium
         </p>
     </div>
 </footer>
@@ -275,13 +592,14 @@
     </div>
 
     <link rel="stylesheet" href="assets/vendor/css/lib.min.css">
-
+  
     <!-- JS -->
     <script src="assets/javascript/app/helpers.js"></script>
     <script src="assets/javascript/app/layoutControl.js"></script>
     <script src="assets/javascript/app/rightSidebar.js"></script>
     <script src="assets/javascript/app/sidebar.js"></script>
     <script src="assets/javascript/app/main.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 
 </html>
