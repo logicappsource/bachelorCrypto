@@ -45,8 +45,11 @@
       console.log('wdw live click');
   });
 
-
-
+  //Sign in
+  $('#btn-signin').on('click', function() {
+    hideWdwAndShowOne('wdw-login');
+    console.log('wdw login click');
+  });
 
   $(function () {
     // FastShell

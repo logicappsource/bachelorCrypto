@@ -141,7 +141,7 @@
 
             <!-- START Right Side Navbar -->
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Sign In<i class="m-l-1 fa-lg fa fa-fw fa-sign-out m-r-1"></i></a></li>
+                <li id="btn-signin"><a href="#">Sign In<i class="m-l-1 fa-lg fa fa-fw fa-sign-in m-r-1"></i></a></li>
 
             </ul>
             <!-- END Right Side Navbar -->
@@ -169,11 +169,11 @@
         <ul class="side-menu m-t-2">
             <li class="Dashboards">
                 <a href="#" title="Dashboards">
-                    <i class="class="snip1303 ion-ios-star-outline""></i><span class="nav-label">Main</span><i class="fa arrow"></i>
+                    <i class="fa fa-university" aria-hidden="true"></i><span class="nav-label">Main</span><i class="fa arrow"></i>
                 </a>
                 <ul>
                     <li class='active' id="btn-trending">
-                        <a href="#"><span class="nav-label" > Trending Market</span>
+                        <a href="#"><span class="nav-label" > <i class="fa fa-area-chart" aria-hidden="true"></i> Trending Market</span>
                         <span class="pull-right label label-primary label-outline text-uppercase">New</span>
                         </a>
                     </li>
@@ -181,32 +181,53 @@
             </li>
             <li id="btn-live">
                 <a href="#" title="Page">
-                    <i class="fa fa-lg fa-file-o fa-fw" "btn-predictions"></i><span class="nav-label">Live</span>
+                  <i class="fa fa-sort" aria-hidden="true"></i><span class="nav-label">Live</span>
                    
                 </a>
             </li>
              <li id="btn-predictions">
                 <a href="#" title="Page">
-                    <i class="fa fa-lg fa-file-o fa-fw" "btn-predictions"></i><span class="nav-label">Predictions</span>
+                   <i class="fa fa-space-shuttle" aria-hidden="true"></i><span class="nav-label">Predictions</span>
                    
                 </a>
             </li>
              <li id="btn-pools">
                 <a href="#" title="Page">
-                    <i class="fa fa-lg fa-file-o fa-fw" "btn-pools"></i><span class="nav-label">Pools</span>
+                   <i class="fa fa-users" aria-hidden="true"></i><span class="nav-label">Pools</span>
                    
                 </a>
             </li>
-             <li id="btn-predictions">
+             <li id="btn-exchanges">
                 <a href="#" title="Page">
-                    <i class="fa fa-lg fa-file-o fa-fw" "btn-predictions"></i><span class="nav-label">Predictions</span>
-                   
+                    <i class="fa fa-balance-scale" aria-hidden="true"></i></i><span class="nav-label">Exchanges</span>
                 </a>
+                   <ul>
+                <li>
+                    <a href="#">
+                        <span class="nav-label">Network</span> <i class="fa arrow"></i>
+                    </a>
+                    <ul>
+                    <li>
+                        <a href="#"><span class="nav-label">BITFINEX</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">KRAKEN</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">CEX.IO</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">POLONIEX</span></a>
+                    </li>
+                    </ul>
+                </li>
+            </ul>
             </li>
 
             <li>
                 <a href="#" title="Apps">
-                    <i class="fa fa-files-o fa-fw fa-lg"></i><span class="nav-label"> Crypto Coins</span> <i class="fa arrow"></i>
+                    <i class="fa fa-btc" aria-hidden="true"></i>
+                    <span class="nav-label"> Crypto Coins</span> <i class="fa arrow"></i>
                 </a>
             <ul>
                 <li>
@@ -281,6 +302,7 @@
                                 
                 <!--expensive stocks-->
                 <div class="col-lg-6" id="expensivestock">
+                    <h3>High </h3>
                     <div class="panel panel-default no-bg b-a-2 b-primary">
 
                         <div class="panel-heading">
@@ -409,6 +431,7 @@
 
                                 <!-- Cheap Stocks--> 
               <div class="col-lg-6" id="cheapstock">
+                   <h3>Low </h3>
                     <div class="panel panel-default no-bg b-a-2 b-primary">
 
                         <div class="panel-heading">
@@ -568,10 +591,44 @@
     <!--<button class="snip0072">Submit</button>-->
     <!-- END Content -->
 
+        <!--wdw login-->
+        <div class="wdw" id="wdw-login">
+            <div class="panel panel-default b-a-2 no-bg b-gray-dark">
+                <div class="panel-heading text-center">
+                    <a href="#"> <img src="../assets/images/cryptonite.png" alt="crypto nite Logo" class="m-t-3 m-b-3 h-20"></a>
+                </div>
+                                    <div class="panel-body">
+                                        <h2 class="text-center f-w-300 m-b-0"> Login</h2>
+                                        <p class="text-center m-b-3">Welcome , login to use our service</p>
+                                        <form class="m-t-3">
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Enter a Username or Email...">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Your Password...">
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Remember Password?
+                                                </label>
+                                            </div>
+                                            <a href="../index.html" role="button" class="btn btn-block m-b-2 btn-primary">Cryptonited</a>
+                                        </form>
+                                    </div>
+                <div class="panel-footer b-a-0 b-r-a-0">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#" class="pull-right">Register</a>
+                </div>
+            </div>
+     </div>
+        <!--wdw predictions-->
         <div class="wdw" id="wdw-predictions"> </div>
+           <!--wdw pools-->
         <div class="wdw" id ="wdw-pools" > </div>
+           <!--wdw live-->
         <div class="wdw" id="wdw-live"> </div>
-
+           <!--wdw exchanges-->
+        <div class="wdw" id="wdw-exchanges"> </div>
 
                 </div>
         </div>
