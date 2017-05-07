@@ -14,7 +14,7 @@
   function hideWdwAndShowOne(sWindowId){
     $('.wdw').hide();
     $('#' + sWindowId).show();
-  }
+   }
 
 
   $(document).ready(function() {
@@ -24,7 +24,7 @@
 
 
   /**********************************************************************/
-  // Events 
+  // Events Handlers 
   /**********************************************************************/
 
   //Predictions
@@ -33,7 +33,7 @@
       console.log('wdw predictions click');
   });
 
-    // Pools
+ // Pools
     $('#btn-pools').on('click', function() {
       hideWdwAndShowOne('wdw-pools');
       console.log('wdw pool click');
@@ -51,6 +51,8 @@
     console.log('wdw login click');
   });
 
+
+
   $(function () {
     // FastShell
 
@@ -58,8 +60,9 @@
 
 
 
-
-
+  /**********************************************************************/
+  // API Data 
+  /**********************************************************************/
 
 
 
