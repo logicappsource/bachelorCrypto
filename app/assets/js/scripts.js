@@ -11,6 +11,15 @@
   'use strict';
 
 
+
+  /**********************************************************************/
+  // BItocin
+  /**********************************************************************/
+
+
+
+
+
   function hideWdwAndShowOne(sWindowId){
     $('.wdw').hide();
     $('#' + sWindowId).show();
@@ -18,7 +27,8 @@
 
 
   $(document).ready(function() {
-    hideWdwAndShowOne('wdw-market , wdw-news');
+    hideWdwAndShowOne('wdw-market , wdw-news ');
+   // hideWdwAndShowOne('wdw-modal-alert');
   });
 
 
@@ -51,6 +61,10 @@
     console.log('wdw login click');
   });
 
+  //hide modal
+  $('#btnmodal').on('click', function() {
+    $('#wdw-modal-alert').fadeOut(500);
+  })
 
 
   $(function () {

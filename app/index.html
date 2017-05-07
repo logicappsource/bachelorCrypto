@@ -302,7 +302,7 @@
                                 
                 <!--expensive stocks-->
                 <div class="col-lg-6" id="expensivestock">
-                    <h3>High </h3>
+                    <h3 id="high">High </h3>
                     <div class="panel panel-default no-bg b-a-2 b-primary">
 
                         <div class="panel-heading">
@@ -431,7 +431,7 @@
 
                                 <!-- Cheap Stocks--> 
               <div class="col-lg-6" id="cheapstock">
-                   <h3>Low </h3>
+                   <h3 id="low">Low </h3>
                     <div class="panel panel-default no-bg b-a-2 b-primary">
 
                         <div class="panel-heading">
@@ -621,7 +621,48 @@
                 </div>
             </div>
      </div>
-        <!--wdw predictions-->
+
+     <!--volume box-->
+     <div class="row m-t-1">
+
+            <!-- START Revenue -->
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="panel panel-default b-a-0 bg-gray-dark">
+                    <div class="panel-heading">Max Trading Volume 24H <small class="pull-right text-gray-lighter">22 - 29 May 2016</small></div>
+                    <div class="panel-body">
+                        <h2 class="m-t-0 f-w-300">Bitcoin $122,887</h2>
+                        <i class="fa fa-fw fa-caret-up text-success"></i> <span class="text-success m-r-1">33,87%</span> <small>from last week</small>
+                    </div>
+                </div>
+            </div>
+            <!-- END Revenue -->
+
+            <!-- START Total Item Sold -->
+            <div class="col-lg-4 col-md-4  col-sm-4">
+                <div class="panel panel-default b-a-0 bg-gray-dark">
+                    <div class="panel-heading">High Loss <small class="pull-right text-gray-lighter">22 - 29 May 2016</small></div>
+                    <div class="panel-body">
+                        <h2 class="m-t-0 f-w-300">- 61.88%</h2>
+                        <i class="fa fa-fw fa-caret-down text-danger"></i> <span class="text-danger m-r-1">33,87%</span> <small>from last week</small>
+                    </div>
+                </div>
+            </div>
+            <!-- END Total Item Sold -->
+
+            <!-- START Total Visitor -->
+            <div class="col-lg-4 col-md-4  col-sm-4">
+                <div class="panel panel-default b-a-0 bg-gray-dark">
+                    <div class="panel-heading">High Value <small class="pull-right text-gray-lighter">22 - 29 May 2016</small></div>
+                    <div class="panel-body">
+                        <h2 class="m-t-0 f-w-300">+ 602.18 %</h2>
+                        <i class="fa fa-fw fa-caret-up text-success"></i> <span class="text-success m-r-1">92,01%</span> <small>from last week</small>
+                    </div>
+                </div>
+            </div>
+            <!-- END Total Visitor -->
+
+        </div>
+           <!--wdw predictions-->
         <div class="wdw" id="wdw-predictions"> </div>
            <!--wdw pools-->
         <div class="wdw" id ="wdw-pools" > </div>
@@ -629,6 +670,22 @@
         <div class="wdw" id="wdw-live"> </div>
            <!--wdw exchanges-->
         <div class="wdw" id="wdw-exchanges"> </div>
+           <!-- Modal Alert --> 
+        <div class="wdw" id="wdw-modal-alert">
+            <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Cryptonit - Alert Warning System</h4></div>
+         <div class="modal-body">
+        <h4>Get access to latest news</h4> <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p> <h4>Build your own alerts on specific crypto currencies</h4> <p>This <a href="javascript: void(0)" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p> 
+        <h4>Get notified by updates around the world economy</h4> <p><a href="javascript: void(0)" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="javascript: void(0)" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p> <hr>
+        <h4>Get notifications by DDOS attacks against Blockchain/Exchanges</h4> <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p> <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p> <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>  </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="btnmodal">Okay</button>
+      </div>  </div> </div>
+
+
 
                 </div>
         </div>
