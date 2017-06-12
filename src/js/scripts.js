@@ -4,11 +4,27 @@
 
 
 
+
+$(document).ready(function() {
+  /*
+//Loading modules from Highcharts 
+var Highcharts = require('highcharts/highstock');
+
+// Load Highmaps as a module
+require('node_modules/highcharts/modules/map')(Highcharts);
+*/
+
+});
+
+
+
+
   /**********************************************************************/
   // BItocin
   /**********************************************************************/
-
-
+  $('#btn-crypto-btc').on('click',function() {
+    hideWdwAndShowOne('wdw-crypto-btc');
+  });
 
 
 
@@ -19,7 +35,7 @@
 
 
   $(document).ready(function() {
-    hideWdwAndShowOne('wdw-market , wdw-news ');
+    hideWdwAndShowOne('wdw-market , wdw-news, wdw-values');
    // hideWdwAndShowOne('wdw-modal-alert');
   });
 
@@ -56,8 +72,12 @@
   //hide modal
   $('#btnmodal').on('click', function() {
     $('#wdw-modal-alert').fadeOut(500);
-  })
+  });
 
+  //Global  
+  $('#btn-global').on('click', function() {
+      hideWdwAndShowOne('wdw-global');
+      });
 
   $(function () {
     // FastShell
@@ -70,7 +90,26 @@
   // API Data 
   /**********************************************************************/
 
+  //var sDivForCoin =   ' <td class="v-a-m text-white">"{{coin-fullname}}" <small class="text-muted">{{coin-short}}</small></td>';
+                   
 
+  //CryptoCompare  -- Fetch All Coins Names 
+  var cryptoLink = "https://www.cryptocompare.com/api/data/coinlist/"; 
+
+  $.ajax({
+    "url": cryptoLink,
+    "cache": false,
+    "dataType": "json", 
+    "method": "get"
+
+  }).done(function(jData) {
+ //   console.log(jData);
+
+ 
+
+  }).fail(function(jFail) {
+  //  console.log(jFail);
+  });   
 
 
 
