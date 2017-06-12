@@ -1,10 +1,13 @@
 {
-  "name": "fastshell",
-  "title": "Fiercely quick and opinionated front-ends",
-  "author": "Hossein Karami",
+  "name": "Cryptonite",
+  "title": "Most Advanced Crypto Tool",
+  "author": "Patrick Sahlgren",
   "url": "https://HosseinKarami.github.io/fastshell",
   "version": "1.0.5",
   "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server/server"
+  },
   "repository": {
     "type": "git",
     "url": "http://github.com/HosseinKarami/fastshell.git"
@@ -24,6 +27,13 @@
     "jshint": "^2.8.0"
   },
   "dependencies": {
-    "highcharts": "^5.0.12"
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "highcharts": "^5.0.12",
+    "jsonwebtoken": "^7.4.1",
+    "pg": "^6.2.4",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.1.0"
   }
 }
