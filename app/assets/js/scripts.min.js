@@ -1,8 +1,8 @@
 /*!
- * fastshell
- * Fiercely quick and opinionated front-ends
+ * Cryptonite
+ * Most Advanced Crypto Tool
  * https://HosseinKarami.github.io/fastshell
- * @author Hossein Karami
+ * @author Patrick Sahlgren
  * @version 1.0.5
  * Copyright 2017. MIT licensed.
  */
