@@ -6,7 +6,7 @@
   "version": "1.0.5",
   "license": "MIT",
   "scripts": {
-    "start": "node ./src/server/server"
+    "start": "node ./src/server"
   },
   "repository": {
     "type": "git",
