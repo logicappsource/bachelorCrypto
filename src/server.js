@@ -10,6 +10,7 @@ process.env.SECRET = "logiccryptonite";
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/client', express.static(__dirname + '/client'));
+app.use('/assets', express.static(__dirname + '/assets'));
 
 //Controllers 
 var userController = require('./server/controllers/user-controller'); 
@@ -18,6 +19,8 @@ var userController = require('./server/controllers/user-controller');
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/client/index.html');
 })
+
+
 
 app.post('/api/user/create', userController.createUser); 
 app.post('/api/user/login', userController.logIn);

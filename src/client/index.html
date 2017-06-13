@@ -1,24 +1,757 @@
 <html ng-app="app">
+        <!-- START Head -->
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-        <head>
-            <meta charset="utf-8">
-        </head>
- 
-    <body>
+    <!-- Enable responsiveness on mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+   
+    <link href="//www.google-analytics.com" rel="dns-prefetch">
+    <link href="//ajax.googleapis.com" rel="dns-prefetch">
+    <link href="/assets/css/style.min.css" rel="stylesheet">
+
+
+        <!-- CDN Sweealert 2  -save --> 
+
+
+    
+    <!--modernizer juery -->
+    <title>
+       Crypto | Nit
+    </title>
+
+    <!--START Loader 
+    <style>
+        #initial-loader{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;width:100%;background:#212121;position:fixed;z-index:10000;top:0;left:0;bottom:0;right:0;transition:opacity .2s ease-out}#initial-loader .initial-loader-top{display:flex;align-items:center;justify-content:space-between;width:200px;border-bottom:1px solid #2d2d2d;padding-bottom:5px}#initial-loader .initial-loader-top > *{display:block;flex-shrink:0;flex-grow:0}#initial-loader .initial-loader-bottom{padding-top:10px;color:#5C5C5C;font-family:-apple-system,"Helvetica Neue",Helvetica,"Segoe UI",Arial,sans-serif;font-size:12px}@keyframes spin{100%{transform:rotate(360deg)}}#initial-loader .loader g{transform-origin:50% 50%;animation:spin .5s linear infinite}body.loading {overflow: hidden !important} body.loaded #initial-loader{opacity:0}
+    </style>-->
+    <!--END Loader
+     <link rel="stylesheet/scss" href="assets/scss/style.scss">-->
+    <!-- SCSS Output -->
+    <!-- build:css assets/stylesheets/app.min.css -->
+    <link rel="stylesheet" href="./assets/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="../assets/stylesheets/app.css">
+    <link rel="stylesheet" href="assets/stylesheets/plugins.css">
+    <!-- endbuild -->
+
+    <!--sweetalert
+    <script src="../node_modules/sweetalert2/dist/bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="./node_modules/sweetakert2/dist/sweetalert2.min.css">
+    <! Include a polyfill for ES6 Promises (optional) for IE11 and Android browser 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+     -->
+
+    <!-- START Favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+   
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="atom.xml">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-83862026-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+
+    <!-- jekyll settings
+    <script>
+        var ASSET_PATH_BASE = '';
+    </script>
+     -->
+</head>
+<!-- END Head -->
+  
+    <script src="/assets/vendor/js/lib.min.js"></script>
+
+    <div class="main-wrap">
+        <nav class="navigation">
+            <!-- START Navbar -->
+<div class="navbar-inverse navbar navbar-fixed-top">
+       <div class="container-fluid">
+          
+           <div class="navbar-header">
+            <a class="current navbar-brand" href="#">
+                <img alt="Cryptonite logo" class="h-20" src="assets/images/cryptonite.png">
+            </a>
+            <button class="navbar-toggle collapsed" data-target="#navbar" data-toggle="collapse" type="button">
+                <i class="fa fa-fw fa-user text-white"></i>
+            </button>
+            <button class="action-sidebar-open navbar-toggle collapsed" type="button">
+                <i class="fa fa-fw fa-bars text-white"></i>
+            </button>
+          </div>
+          
+        <div class="collapse navbar-collapse" id="navbar">
+           
+            <!-- START Search Mobile -->
+            <div class="form-group hidden-lg hidden-md hidden-sm m-t-2">
+                <div class="input-group hidden-lg hidden-md">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"><i class="fa fa-fw fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            <!-- END Search Mobile -->
+
+            <!-- START Left Side Navbar -->
+            <ul class="nav navbar-nav navbar-left clearfix yamm">
+
+                <!-- START Switch Sidebar ON/OFF -->
+                <li id="sidebar-switch" class="hidden-xs">
+                    <a class="action-toggle-sidebar-slim" data-placement="bottom" data-toggle="tooltip" href="#" title="Slim sidebar on/off">
+                        <i class="fa fa-lg fa-bars fa-fw"></i>
+                    </a>
+                </li>
+                <!-- END Switch Sidebar ON/OFF -->
+                <li class="spin-search-box clearfix hidden-xs">
+                    <a href="#" class="pull-left">
+                        <i class="fa fa-search fa-lg icon-inactive"></i>
+                        <i class="fa fa-close  fa-lg icon-active"></i>
+                    </a>
+                    <div class="input-group input-group-sm pull-left p-10">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn active">
+                            <button class="btn btn-primary" type="button">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <!-- START Left Side Navbar -->
+
+            <!-- START Right Side Navbar -->
+            <ul class="nav navbar-nav navbar-right">
+                <li id="btn-signin"><a href="#">Sign In<i class="m-l-1 fa-lg fa fa-fw fa-sign-in m-r-1"></i></a></li>
+
+            </ul>
+            <!-- END Right Side Navbar -->
+        </div>
+      
+    </div>
+</div>
+<!-- END Navbar -->
+ <!-- START Sidebars -->
+<aside class="navbar-default sidebar">
+
+    <div class="sidebar-overlay-head">
+        <img src="assets/images/spin-logo-inverted.png" alt="Logo" />
+        <a href="javascript:void(0)" class="sidebar-switch action-sidebar-close">
+            <i class="fa fa-times"></i>
+        </a>
+    </div>
+    <div class="sidebar-logo">
+        <img class="logo-default" src="assets/images/spin-logo-big-inverse-@2X.png" alt="Logo" width="53">
+        <img class="logo-slim" src="assets/images/spin-logo-slim.png" alt="Logo">
+    </div>
+
+    <div class="sidebar-content">
+        <!-- START Tree -->
+        <ul class="side-menu m-t-2">
+            <li class="Dashboards">
+                <a href="#" title="Dashboards">
+                    <i class="fa fa-university" aria-hidden="true"></i><span class="nav-label">Main</span><i class="fa arrow"></i>
+                </a>
+                <ul>
+                    <li class='active' id="btn-trending">
+                        <a href="#"><span class="nav-label" > <i class="fa fa-area-chart" aria-hidden="true"></i> Trending Market</span>
+                        <span class="pull-right label label-primary label-outline text-uppercase">New</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li id="btn-live">
+                <a href="#" title="Page">
+                  <i class="fa fa-sort" aria-hidden="true"></i><span class="nav-label">Live</span>
+                   
+                </a>
+            </li>
+             <li id="btn-global">
+                <a href="#" title="Page">
+                   <i class="fa fa-space-shuttle" aria-hidden="true"></i><span class="nav-label">Global</span>
+                   
+                </a>
+            </li>
+             <li id="btn-pools">
+                <a href="#" title="Page">
+                   <i class="fa fa-users" aria-hidden="true"></i><span class="nav-label">Pools</span>
+                   
+                </a>
+            </li>
+            <!--
+             <li id="btn-exchanges">
+                <a href="#" title="Page">
+                    <i class="fa fa-balance-scale" aria-hidden="true"></i></i><span class="nav-label">Exchanges</span>
+                </a>
+                   <ul>
+                <li>
+                    <a href="#">
+                        <span class="nav-label">Network</span> <i class="fa arrow"></i>
+                    </a>
+                    <ul>
+                    <li>
+                        <a href="#"><span class="nav-label">BITFINEX</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">KRAKEN</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">CEX.IO</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span class="nav-label">POLONIEX</span></a>
+                    </li>
+                    </ul>
+                </li>
+            </ul>
+            </li>
+-->
+            <li>
+                <a href="#" title="Apps">
+                    <i class="fa fa-btc" aria-hidden="true"></i>
+                    <span class="nav-label"> Crypto Coins</span> <i class="fa arrow"></i>
+                </a>
+            <ul>    
+                     <li id="btn-crypto-btc">
+                        <a href="#"><span class="nav-label">Bitcoin</span></a>
+                    </li>
+                    <ul>
+                   
+                    </ul>
+                </li>
+            </ul>
+            </li>
+        </ul>
+        <!-- END Tree  -->
+
+        <div class="sidebar-default-visible"><hr></div>
+
+    </div>
+</aside>
+<!-- END Sidebars -->
+
+        </nav>
+
+        <div class="content">
+            <!-- START Sub-Navbar with Header only-->
+<div class="sub-navbar sub-navbar__header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header m-t-0">
+                    <h3 class="m-t-0">CryptoNit</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Sub-Navbar with Header only-->
+
+<!-- START Sub-Navbar with Header and Breadcrumbs-->
+<div class="sub-navbar sub-navbar__header-breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 sub-navbar-column">
+                <div class="sub-navbar-header">
+                    <h3><img alt="Cryptonite logo" class="h-20" src="assets/images/cryptonite.png">  CryptoNit     Platform  </h3>
+                </div>
+                <ol class="breadcrumb navbar-text navbar-right no-bg">
+                    
+                    <li>
+                        
+                    </li>
+                    <li class="active">Coin of today</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Sub-Navbar with Header and Breadcrumbs-->
+
+
+<div class="container">
+
+    <!-- START Content -->
+    <div class="row">
+        <div class="col-lg-12">
+
+           <!--Wdw - market-->
+           <div class="wdw" id="wdw-market">
+
+
+<!-- START Revenue -->
+            <div class="col-lg-4 col-md-4 col-sm-4">
+                <div class="panel panel-default b-a-0 bg-gray-dark">
+                    <div class="panel-heading">Max Trading Volume 24H <small class="pull-right text-gray-lighter">22 - 29 May 2016</small></div>
+                    <div class="panel-body">
+                        <h2 class="m-t-0 f-w-300">Bitcoin $122,887</h2>
+                        <i class="fa fa-fw fa-caret-up text-success"></i> <span class="text-success m-r-1">33,87%</span> <small>from last week</small>
+                    </div>
+                </div>
+            </div>
+            <!-- END Revenue -->
+
+            <!-- START Total Item Sold -->
+            <div class="col-lg-4 col-md-4  col-sm-4">
+                <div class="panel panel-default b-a-0 bg-gray-dark">
+                    <div class="panel-heading">High Loss <small class="pull-right text-gray-lighter">22 - 29 May 2016</small></div>
+                    <div class="panel-body">
+                        <h2 class="m-t-0 f-w-300">Mercury -61.88%</h2>
+                        <i class="fa fa-fw fa-caret-down text-danger"></i> <span class="text-danger m-r-1">33,87%</span> <small>from last week</small>
+                    </div>
+                </div>
+            </div>
+            <!-- END Total Item Sold -->
+
+            <!-- START Total Visitor -->
+            <div class="col-lg-4 col-md-4  col-sm-4">
+                <div class="panel panel-default b-a-0 bg-gray-dark">
+                    <div class="panel-heading">High Value <small class="pull-right text-gray-lighter">22 - 29 May 2016</small></div>
+                    <div class="panel-body">
+                        <h2 class="m-t-0 f-w-300">  Espers + 602.18 %</h2>
+                        <i class="fa fa-fw fa-caret-up text-success"></i> <span class="text-success m-r-1">92,01%</span> <small>from last week</small>
+                    </div>
+                </div>
+            </div>
+            <!-- END Total Visitor -->
+                                
+                <!--expensive stocks-->
+                <div class="col-lg-6" id="expensivestock">
+                    <h3 id="high">High </h3>
+                    <div class="panel panel-default no-bg b-a-2 b-primary">
+
+                        <div class="panel-heading">
+                            Expensive Stocks
+                        </div>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="small text-muted text-uppercase"><strong></strong>
+                                    </th>
+                                    <th class="small text-muted text-uppercase"><strong>Price</strong>
+                                    </th>
+                                    <th class="small text-muted text-uppercase text-right"><strong>Score</strong>
+                                    </th>
+                                    <th class="small text-right text-muted text-uppercase"><strong>Q</strong>
+                                    </th>
+                                    <th class="small text-right text-muted text-uppercase"><strong>V</strong>
+                                    </th>
+                                    <th class="small text-right text-muted text-uppercase"><strong>G</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="cryptolisttable">
+
+                                <tr id="cryptotablerow">
+                                    <td class="v-a-m text-white">Bitcoin <small class="text-muted">(XBT)</small>
+                                    </td>
+                                    <td class="v-a-m text-success"><i class="fa fa-caret-up"></i> <span>93.2%</span>
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        11
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        98
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        38
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        15
+                                    </td>
+                                </tr>
+                                
+                               
+                                <tr>
+                                    <td class="v-a-m text-white">Ripple <small class="text-muted">(GOOGL)</small>
+                                    </td>
+                                    <td class="v-a-m text-danger"><i class="fa fa-caret-down"></i> <span>90.9%</span>
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        11
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        98
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        38
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        15
+                                    </td>
+                                </tr>
+                             
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <!--End of epensive stocks-->
 
 
 
 
 
+                                <!-- Cheap Stocks--> 
+              <div class="col-lg-6" id="cheapstock">
+                   <h3 id="low">Low </h3>
+                    <div class="panel panel-default no-bg b-a-2 b-primary">
 
-    </body>
+                        <div class="panel-heading">
+                            Cheap Stocks
+                        </div>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th class="small text-muted text-uppercase"><strong></strong>
+                                    </th>
+                                    <th class="small text-muted text-uppercase"><strong>Price</strong>
+                                    </th>
+                                    <th class="small text-muted text-uppercase text-right"><strong>Score</strong>
+                                    </th>
+                                    <th class="small text-right text-muted text-uppercase"><strong>Q</strong>
+                                    </th>
+                                    <th class="small text-right text-muted text-uppercase"><strong>V</strong>
+                                    </th>
+                                    <th class="small text-right text-muted text-uppercase"><strong>G</strong>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="v-a-m text-white">DASH <small class="text-muted">(DASH)</small>
+                                    </td>
+                                    <td class="v-a-m text-success"><i class="fa fa-caret-up"></i> <span>4.1%</span>
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        87
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        35
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        17
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        45
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="v-a-m text-white">Monero <small class="text-muted">(XMR)</small>
+                                    </td>
+                                    <td class="v-a-m text-danger"><i class="fa fa-caret-down"></i> <span>31.2%</span>
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        11
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        98
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        38
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        15
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="v-a-m text-white">ZCash <small class="text-muted">(ZEC)</small>
+                                    </td>
+                                    <td class="v-a-m text-success"><i class="fa fa-caret-up"></i> <span>75.3%</span>
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        12
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        56
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        23
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        16
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="v-a-m text-white">Augur<small class="text-muted">(REP)</small>
+                                    </td>
+                                    <td class="v-a-m text-danger"><i class="fa fa-caret-down"></i> <span>78.8%</span>
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        11
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        98
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        38
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        15
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="v-a-m text-white">Dogecoin<small class="text-muted">(DOGE)</small>
+                                    </td>
+                                    <td class="v-a-m text-danger"><i class="fa fa-caret-down"></i> <span>91.4%</span>
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        11
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        98
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        38
+                                    </td>
+                                    <td class="v-a-m text-right">
+                                        15
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+                <!--End of cheap stocks-->
+
+
+                                <!--latest news --> 
+                                <div class="row m-t-3" >
+                <div class="col-md-4">
+                    <h3 class="m-t-0 f-w-300">Latest News</h3> </div>
+                <div class="col-md-4 col-md-offset-4 text-right">
+                    <button type="submit" class="btn btn-default btn-sm">All News <i class="fa fa-fw fa-angle-right"></i></button>
+                </div>
+            </div>
+
+
+            <!--news-->
+            <div class="row m-b-3" id="news">
+                            <div class="col-lg-4">
+                                <small><span>09-October-2016</span></small>
+                                <br>
+                                <h5 class="m-t-0"><a href="http://www.coindesk.com/mauritius-the-tropical-paradise-looking-to-become-a-blockchain-hub/" class="text-white"><span>Mauritius: The Tropical Paradise Looking to Become a Blockchain Hub</span></a></h5>
+                                <p><span>"We are working to take our economy to another level, and these kinds of technologies are very important in our strategy," said Atma Narasiah, head of technology, innovation and services at the Board of Investment Mauritius, the national investment promotion agency of the island.
+
+He told CoinDesk:</span></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <small><span>28-November-2016</span></small>
+                                <br>
+                                <h5 class="m-t-0"><a href="http://www.coindesk.com/sorting-hat-time-mimblewimble-weighs-own-blockchain-launch/" class="text-white"><span> MimbleWimble Weighs Own Blockchain Launch</span></a></h5>
+                                <p><span>A team of anonymous Harry Potter-inspired developers has released a new outline for the development of the cryptocurrency anonymity project, MimbleWimble. Meanwhile, the Grin blockchain, theoretically faster and more efficient than bitcoin already, is likely to win even more fans if plans to port the functionality of the Lightning Network into it succeed.</span></p>
+                            </div>
+                            <div class="col-lg-4">
+                                <small><span>23-July-2016</span></small>
+                                <br>
+                                <h5 class="m-t-0"><a href="https://cointelegraph.com/news/litecoin-price-surges-to-30-as-south-koreas-largest-exchange-adds-support" class="text-white"><span>Litecoin Price Surges to $30 as South Korea's Largest Exchange Adds Support</span></a></h5>
+                                <p><span>Litecoin price has been on the rise since the activation of the Bitcoin Core development team’s transaction malleability fix and scaling solution Segregated Witness (SegWit). The rise in demand toward Litecoin pushed digital currency exchanges in major regions to add trading support for Litecoin users and investors.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                    
+                <!--end of news -->
+    <!--<button class="snip0072">Submit</button>-->
+    <!-- END Content -->
+
+        <!--wdw login-->
+        <div class="wdw" id="wdw-login">
+            <div class="panel panel-default b-a-2 no-bg b-gray-dark">
+                <div class="panel-heading text-center">
+                    <a href="#"> <img src="../assets/images/cryptonite.png" alt="crypto nite Logo" class="m-t-3 m-b-3 h-20"></a>
+                </div>
+                                    <div class="panel-body">
+                                        <h2 class="text-center f-w-300 m-b-0"> Login</h2>
+                                        <p class="text-center m-b-3">Welcome , login to use our service</p>
+                                        <form class="m-t-3">
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Enter a Username or Email...">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control" placeholder="Your Password...">
+                                            </div>
+                                            <div class="checkbox">
+                                                <label>
+                                                    <input type="checkbox"> Remember Password?
+                                                </label>
+                                            </div>
+                                            <a href="../index.html" role="button" class="btn btn-block m-b-2 btn-primary">Cryptonited</a>
+                                        </form>
+                                    </div>
+                <div class="panel-footer b-a-0 b-r-a-0">
+                    <a href="#">Forgot Password?</a>
+                    <a href="#" class="pull-right">Register</a>
+                </div>
+            </div>
+     </div>
+
+     <!--volume box-->
+     <div class="row m-t-1">
+        
+            
+
+        </div>
+           <!--wdw predictions-->
+        <div class="wdw" id="wdw-global">
+
+            <div id="container" style="height: 400px; min-width: 310px"></div>
+
+
+          
+        </div>
+           <!--wdw pools-->
+        <div class="wdw" id ="wdw-pools" > </div>
+           <!--wdw live-->
+        <div class="wdw" id="wdw-live"> 
+
+                            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th class="small text-muted text-uppercase"><strong>#</strong>
+                        </th>
+                        <th class="small text-muted text-uppercase"><strong>Product Name</strong>
+                        </th>
+
+                        <th class="small text-muted text-uppercase"><strong>Stats</strong>
+                        </th>
+                        <th class="small text-muted text-uppercase text-right"><strong>Live Market </strong>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row"><span>1</span>
+                        </th>
+                        <td><span class="text-white">Licensed Fresh Gloves</span>
+                        </td>
+                        <td class="v-a-m">
+                            <span class="line">5,3,9,6,5,9,7,3,5,2</span>
+                        </td>
+                        <td class="text-right"> <i class="fa fa-caret-down text-danger"></i> <span class="text-danger">27.87%</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="text-muted">2</span>
+                        </th>
+                        <td><span class="text-white">Sleek Cotton Mouse</span>
+                        </td>
+                        <td class="v-a-m">
+                            <span class="line">5,3,2,-1,-3,-2,2,3,5,2</span>
+                        </td>
+                        <td class="text-right"> <i class="fa fa-caret-up text-success"></i> <span class="text-success">54.09%</span>
+                        </td>
+                    </tr>
+                  
+                  
+    
+                </tbody>
+            </table>
+
+        </div>
+
+
+           <!--wdw exchanges-->
+        <div class="wdw" id="wdw-exchanges"> </div>
+
+        <!-- Crypto coins -->
+
+
+        <!-- Crypto BTc -->
+              <div class="wdw" id="wdw-crypto-btc">
+                  <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">The latest Bitcoin Price Index is 1,534.60 USD <a href="https://t.co/lzUu2wyPQN">https://t.co/lzUu2wyPQN</a> <a href="https://t.co/xzvSuXhgih">pic.twitter.com/xzvSuXhgih</a></p>&mdash; CoinDesk (@coindesk) <a href="https://twitter.com/coindesk/status/861249277703663616">May 7, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        <div id="reddit" class="col-xs-6 text-left">
+                               
+                    <div class="rembeddit" style="font-family:verdana,arial,helvetica,sans-serif;background-color: #FFFFFF;border: 1px solid #336699;"><div class="reddit-header" style="padding: 5px; padding-bottom:1px;background-color:#CEE3F8"><h4 class="reddit-title" style="margin:0;padding-bottom:3px"><a href="https://www.reddit.com/r/Bitcoin/" style="margin:5px;"><img src="https://www.reddit.com/static/spreddit1.gif" alt="" style="border:none"></a>links from <a style="text-decoration:none;color:#336699" href="https://www.reddit.com/r/Bitcoin/">Bitcoin.reddit.com</a></h4></div><div class="rembeddit-content" style="padding:5px;"><div style="margin-left:5px;margin-top:7px;"><div class="reddit-link even first-half thing id-t3_61s75o "><a href="https://www.reddit.com/r/Bitcoin/comments/61s75o/rbitcoin_faq_newcomers_please_read/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://www.reddit.com/r/Bitcoin/comments/61s75o/rbitcoin_faq_newcomers_please_read/">/r/Bitcoin FAQ - Newcomers please read</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">232 points</span><span class="score unvoted">233 points</span><span class="score likes" style="display: none;">234 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/61s75o/rbitcoin_faq_newcomers_please_read/">105 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link odd first-half thing id-t3_69jywp "><a href="https://www.reddit.com/r/Bitcoin/comments/69jywp/a_practical_guide_to_accidental_low_fee/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://medium.com/@nopara73/holy-cow-i-sent-a-bitcoin-transaction-with-too-low-fees-are-my-coins-lost-forever-7a865e2e45ba">A Practical Guide To Accidental Low Fee Transactions</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">117 points</span><span class="score unvoted">118 points</span><span class="score likes" style="display: none;">119 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69jywp/a_practical_guide_to_accidental_low_fee/">39 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link even first-half thing id-t3_69mugf "><a href="https://www.reddit.com/r/Bitcoin/comments/69mugf/amazing_bitcoin_billboard_near_lax/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><span class="linkflairlabel" style="color: #545454; background-color: #f5f5f5; border: 1px solid #dedede; display: inline-block; font-size: x-small; margin-right: 0.5em; padding: 0 2px; max-width: 10em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">/r/all</span><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://i.redd.it/f4dmhdwzexvy.jpg">Amazing bitcoin billboard near LAX!</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">9818 points</span><span class="score unvoted">9819 points</span><span class="score likes" style="display: none;">9820 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69mugf/amazing_bitcoin_billboard_near_lax/">425 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link odd first-half thing id-t3_69rfhh "><a href="https://www.reddit.com/r/Bitcoin/comments/69rfhh/bitminter_started_signaling_segwit_blocks/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://www.reddit.com/r/Bitcoin/comments/69rfhh/bitminter_started_signaling_segwit_blocks/">Bitminter started signaling SegWit blocks!</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">• points</span><span class="score unvoted">• points</span><span class="score likes" style="display: none;">• points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69rfhh/bitminter_started_signaling_segwit_blocks/">5 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link even first-half thing id-t3_69qnxd "><a href="https://www.reddit.com/r/Bitcoin/comments/69qnxd/bitcoindev_perblock_noninteractive_schnorr/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://lists.linuxfoundation.org/pipermail/bitcoin-dev/2017-May/014272.html">[bitcoin-dev] Per-block non-interactive Schnorr signature aggregation</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">43 points</span><span class="score unvoted">44 points</span><span class="score likes" style="display: none;">45 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69qnxd/bitcoindev_perblock_noninteractive_schnorr/">8 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link odd first-half thing id-t3_69ozlp "><a href="https://www.reddit.com/r/Bitcoin/comments/69ozlp/segwit_causes_litecoin_to_increase_over_700_in_a/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://www.reddit.com/r/Bitcoin/comments/69ozlp/segwit_causes_litecoin_to_increase_over_700_in_a/">SegWit causes litecoin to increase over 700% in a month &amp; a half</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">202 points</span><span class="score unvoted">203 points</span><span class="score likes" style="display: none;">204 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69ozlp/segwit_causes_litecoin_to_increase_over_700_in_a/">148 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link even second-half thing id-t3_69qrz0 "><a href="https://www.reddit.com/r/Bitcoin/comments/69qrz0/today_joinmarket_is_two_years_old_xpost/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://www.reddit.com/r/Bitcoin/comments/69qrz0/today_joinmarket_is_two_years_old_xpost/">Today JoinMarket is two years old (x-post r/joinmarket)</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">27 points</span><span class="score unvoted">28 points</span><span class="score likes" style="display: none;">29 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69qrz0/today_joinmarket_is_two_years_old_xpost/">6 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link odd second-half thing id-t3_69poqy "><a href="https://www.reddit.com/r/Bitcoin/comments/69poqy/this_is_the_uasf_at_work_bu_signalers_looking_for/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://twitter.com/AnselLindner/status/861036371191799808">"this is the #UASF at work. #BU signalers looking for a get-out clause" &amp; I welcome them!</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">73 points</span><span class="score unvoted">74 points</span><span class="score likes" style="display: none;">75 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69poqy/this_is_the_uasf_at_work_bu_signalers_looking_for/">24 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link even second-half thing id-t3_69ooxr "><a href="https://www.reddit.com/r/Bitcoin/comments/69ooxr/more_relevant_than_ever_this_fox_news_video/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://www.youtube.com/watch?v=55KyJl8faNY">More relevant than ever, this FOX News video explains how Venezuelans are buying food with Bitcoin from the internet.</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">126 points</span><span class="score unvoted">127 points</span><span class="score likes" style="display: none;">128 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69ooxr/more_relevant_than_ever_this_fox_news_video/">13 comments</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link odd second-half thing id-t3_69qxdt "><a href="https://www.reddit.com/r/Bitcoin/comments/69qxdt/bitcoin_is_less_volatile_than_the_euro_fee/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://fee.org/articles/bitcoin-is-less-volatile-than-the-euro/">Bitcoin Is Less Volatile than the Euro | FEE</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">15 points</span><span class="score unvoted">16 points</span><span class="score likes" style="display: none;">17 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69qxdt/bitcoin_is_less_volatile_than_the_euro_fee/">1 comment</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div><div class="reddit-link even second-half thing id-t3_69rd0h "><a href="https://www.reddit.com/r/Bitcoin/comments/69rd0h/gentlemen_start_your_engine/" class="reddit-voting-arrows" target="_blank" style="float:left; display:block;"><img src="https://www.reddit.com/static/widget_arrows.gif" alt="vote" style="border:none;margin-top:3px;"></a><div class="reddit-entry entry unvoted" style="margin-left: 28px; min-height:32px;"><a class="reddit-link-title may-blank" style="text-decoration:none;color:#336699;font-size:small;" href="https://twitter.com/kenshishido/status/861208248334123008">Gentlemen, start your engine!</a><br><small style="color:gray;"><span class="score dislikes" style="display: none;">10 points</span><span class="score unvoted">11 points</span><span class="score likes" style="display: none;">12 points</span> | <a class="reddit-comment-link may-blank" style="color:gray" href="https://www.reddit.com/r/Bitcoin/comments/69rd0h/gentlemen_start_your_engine/">1 comment</a></small></div><div class="reddit-link-end" style="clear:left; padding:3px;"></div></div></div></div></div></div>
+                  
+                   </div>
+
+           <!-- Modal Alert --> 
+        <div class="wdw" id="wdw-modal-alert">
+            <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+        <h4 class="modal-title" id="myModalLabel">Cryptonit - Alert Warning System</h4></div>
+         <div class="modal-body">
+        <h4>Get access to latest news</h4> <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p> <h4>Build your own alerts on specific crypto currencies</h4> <p>This <a href="javascript: void(0)" role="button" class="btn btn-default popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p> 
+        <h4>Get notified by updates around the world economy</h4> <p><a href="javascript: void(0)" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="javascript: void(0)" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p> <hr>
+        <h4>Get notifications by DDOS attacks against Blockchain/Exchanges</h4> <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p> <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p> <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>  </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="btnmodal">Okay</button>
+     </div>  </div> </div>
+
+
+
+                </div>
+        </div>
+
+        <!-- START Footer -->
+<footer>
+    <div class="container-fluid">
+        <p class="text-gray-dark" id="footertxt">
+            © 2017 - Cryptonit   -- Donate if you love us <3   --     3Qm8zcRbfZnvqmKgGWRUTGsRfdcVAKKvPg  
+        </p>
+    </div>
+</footer>
+<!-- END Footer -->
+
+    </div>
+
+    <link rel="stylesheet" href="/assets/vendor/css/lib.min.css">
+  
+    <!-- JS -->
+    <script src="/assets/javascript/app/helpers.js"></script>
+    <script src="/assets/javascript/app/layoutControl.js"></script>
+    <script src="/assets/javascript/app/rightSidebar.js"></script>
+    <script src="/assets/javascript/app/sidebar.js"></script>
+    <script src="/assets/javascript/app/main.js"></script>
+    <script src="/assets/js/scripts.js"></script>
+
+    <!-- Highstocks--> 
+    <script> 
+    /*
+    High Stock
+    */
+
+</script> 
+    
+</body>
+
 
     <!-- Libs --> 
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-      <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-
       <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.min.js"></script>
 
     <!--App --> 
     <script src="/client/app.js">  </script> 
+
+
+      
 </html>
