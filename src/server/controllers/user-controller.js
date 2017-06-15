@@ -33,6 +33,7 @@ module.exports.logIn = function(req, res) {
            })
 
             if (isVerified) {
+                delete userData.user_password; 
                 //User Authenticated - Apply token 
                       res.json({
                     userData: userData  

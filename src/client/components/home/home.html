@@ -1,4 +1,23 @@
 <div>
 This is Home Page 
 
+
+<h3>Enter a username  </h3>
+<input type="text" ng-model="newUser.username" maxlength="40" /> 
+
+<h3>Enter your email </h3>
+<input type="text"  ng-model="newUser.email"/> 
+
+<h3>Select your password</h3>
+<input type="password" ng-model="newUser.user_password" /> 
+
+<button ng-click="createUser(newUser)">  Cretee my user </button> 
  </div>
+
+ 
+ <h3> Your username or Email </h3>
+ <input type="text" ng-model="existingUser.loginName" /> 
+
+<h3>Your password </h3>
+<input type="password" ng-model="existingUser.password" /> 
+<button ng-click="logUserIn(existingUser)"> log me in chief </button>
