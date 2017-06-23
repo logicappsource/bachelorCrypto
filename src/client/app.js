@@ -7,6 +7,12 @@
             controller: 'homeCtrl'
         }) 
 
-        $urlRouterProvider.otherwise('/'); //Redirect Home / sfor secur
+        .main('main', {
+            url: '/main',
+            templateUrl:'/client/components/main/main.html',
+            controller: 'mainCtrl'
+        })
+
+        $urlRouterProvider.otherwise('/'); //Redirect Home / UN secure Routing -> fallback 
     }])
 })(window, window.angular) 

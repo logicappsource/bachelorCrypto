@@ -29,7 +29,6 @@ module.exports.logIn = function(req, res) {
         if(result.length > 0) {
            var userData = result[0];
            var isVerified = bcrypt.compareSync(submittedPassword, userData.user_password);
-
            var token = jwt.sign(userData, process.env.SECRET, {
                     expiresIn: 60*60*24
            })

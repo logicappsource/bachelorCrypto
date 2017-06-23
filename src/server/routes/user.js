@@ -22,6 +22,7 @@ router.use(function(req, res, next) {
 
 //GET -- Endpoints 
 router.get('/get_friends', function(req, res) {
+
      var query = "SELECT * FROM user_friends WHERE user_id =" + req.query.user_id;
      db.query(query).spread(function (result, metadata) {
          res.json({
@@ -31,17 +32,29 @@ router.get('/get_friends', function(req, res) {
          res.status(500).send(err); 
      })
  });
+
  router.get('/get_friend_requests', function(req, res) {
-     var query = "SELECT * FROM user_friend_requests WHERE received_id=" + req.query.user_id + " AND status='pending'";
- 
-     db.query(query).spread(function(result, metadata) {
-         res.json({
-             data: result
-              })
-         }).catch(function(err){
-             res.status(500).send("Unable to get friend requests at this time")
-     });
- })
+        var query = "SELECT * FROM user_friend_requests WHERE received_id=" + req.query.user_id + " AND status='pending'";
+    
+        db.query(query).spread(function(result, metadata) {
+            res.json({
+                data: result
+                })
+            }).catch(function(err){
+                res.status(500).send("Unable to get friend requests at this time")
+        });
+    })
+
+ router.get('/get_users_by_quantity', function(req, res) {
+        var query = "SELECT id, username,first_name, last_name FROM users WHERE id != "+ req.user_id; 
+        db.query(query).spread(function(result, metadata) {
+            res.json({
+                data: result
+            })
+        }).catch(function(err) {
+            res.status(500).send("Unable to query DB this time ");
+        })
+});
 
 //POST -- Endpoints 
 router.post('/request_friend', function(req, res) {
