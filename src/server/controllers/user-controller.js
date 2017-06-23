@@ -48,3 +48,7 @@ module.exports.logIn = function(req, res) {
 }
 
 
+
+//Nodule for API -> Crypto Currencies 
+//Notifications -> FROM remote php synchronize in the app -> 
+//Login 

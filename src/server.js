@@ -15,17 +15,18 @@ app.use('/assets', express.static(__dirname + '/assets'));
 //Controllers 
 var userController = require('./server/controllers/user-controller'); 
 
+//Routers 
+var secureUserRouter = require('./server/routes/user'); 
+
 //Routes 
-app.get('/', function(req, res) {
+app.get('/', function(req, res) { // templating 
     res.sendFile(__dirname + '/client/index.html');
 })
 
 
-
+app.use('/secure-api/user', secureUserRouter); 
 app.post('/api/user/create', userController.createUser); 
 app.post('/api/user/login', userController.logIn);
-
-
 
 
 
