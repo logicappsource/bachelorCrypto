@@ -18,6 +18,7 @@ var userController = require('./server/controllers/user-controller');
 //Routers 
 var secureUserRouter = require('./server/routes/user'); 
 
+
 //Routes 
 app.get('/', function(req, res) { // templating 
     res.sendFile(__dirname + '/client/index.html');

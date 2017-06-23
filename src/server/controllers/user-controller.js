@@ -3,6 +3,9 @@ var bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(5);
 var jwt = require('jsonwebtoken');
 
+//Nodule for API -> Crypto Currencies 
+//Notifications -> FROM remote php synchronize in the app -> 
+//Login 
 
 
 module.exports.createUser = function(req, res) {
@@ -20,8 +23,7 @@ module.exports.createUser = function(req, res) {
 module.exports.logIn = function(req, res) {
     var submittedPassword = req.body.password; 
     var query = "SELECT * FROM users WHERE username='" + req.body.loginName + "' OR email='" + req.body.loginName + "'";
-
-    var testQuery = "SELECT * FROM users"; 
+//    var testQuery = "SELECT * FROM users"; 
 
     db.query(query).spread(function(result, metadata) {
         if(result.length > 0) {
@@ -49,6 +51,3 @@ module.exports.logIn = function(req, res) {
 
 
 
-//Nodule for API -> Crypto Currencies 
-//Notifications -> FROM remote php synchronize in the app -> 
-//Login 
